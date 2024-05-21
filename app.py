@@ -27,9 +27,9 @@ with st.sidebar:
         if not (replicate_api.startswith('r8_') and len(replicate_api)==40):
             st.warning('Please enter your Replicate API token.')
             st.markdown("**Don't have an API token?** Head over to [Replicate](https://replicate.com) to sign up for one.")
-
-    os.environ['REPLICATE_API_TOKEN'] = replicate_api
-
+    st.write(f"gggg {replicate_api} ---")
+    os.environ['REPLICATE_API_TOKEN'] = 'r8_PD7gLbVL8EW97flXUQyv6bQxx2V9TOE2Koksd'
+    
     wordpress_login_id = st.text_input('Enter Wordpress Admin Login ID/Email:')
     
     wordpress_site_url = st.text_input('Enter Wordpress Site URL (Eg. https://mywordpress_site.com ):')
