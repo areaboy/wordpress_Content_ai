@@ -111,7 +111,10 @@ def process_data():
         st.error(f"Wordpress Site URL cannot be empty....")
     
  else: 
-    # with st.spinner("please wait....."):      
+    
+    replicate_api = st.secrets['REPLICATE_API_TOKEN']
+    st.error(f"Wordpress {replicate_api}....")
+    os.environ['REPLICATE_API_TOKEN'] = replicate_api
     query = []
     for event in replicate.stream(
     "snowflake/snowflake-arctic-instruct",
