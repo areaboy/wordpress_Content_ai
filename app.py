@@ -101,6 +101,9 @@ def clear_response_history():
 
 t_prompt_data= st.text_area('Enter Prompt: (Eg. Ask ARCTIC AI to generate any Contents.)' )
 def process_data(): 
+ replicate_api = st.secrets['REPLICATE_API_TOKEN']
+ st.error(f"Wordpress {replicate_api}....")
+ os.environ['REPLICATE_API_TOKEN'] = replicate_api
  if replicate_api =='':
      st.markdown("**Replicate API token is empty**")
  elif wordpress_login_id == "":  
@@ -111,10 +114,6 @@ def process_data():
         st.error(f"Wordpress Site URL cannot be empty....")
     
  else: 
-    
-    replicate_api = st.secrets['REPLICATE_API_TOKEN']
-    st.error(f"Wordpress {replicate_api}....")
-    os.environ['REPLICATE_API_TOKEN'] = replicate_api
     query = []
     for event in replicate.stream(
     "snowflake/snowflake-arctic-instruct",
