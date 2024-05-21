@@ -4,8 +4,9 @@ Helping Wordpress Content Creators to create quality post contents and posts on 
 
 # How we built it
 
-# Built in Python leveraging Streamlit, WordpPress Rest API and Snowflake Arctic AI Models
-Technology Used
+ Built in Python leveraging Streamlit, WordpPress Rest API and Snowflake Arctic AI Models
+ 
+# Technology Used
 
 **1.) Streamlit**
 
