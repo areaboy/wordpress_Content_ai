@@ -110,8 +110,7 @@ def process_data():
  elif wordpress_site_url == "":  
         st.error(f"Wordpress Site URL cannot be empty....")
     
- else:
-    os.environ['REPLICATE_API_TOKEN'] = replicate_api  
+ else: 
     # with st.spinner("please wait....."):      
     query = []
     for event in replicate.stream(
